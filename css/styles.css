@@ -105,12 +105,12 @@
     width: 100%;
     max-width: 80%; /* Adjust max-width as needed */
     margin-bottom: 7%; /* Adjust margin as needed */
-    overflow: hidden; /* Hide overflow content */
+    /*overflow: hidden;  Hide overflow content */
     background-color: #f9f9f9; /* Background color */
     border-radius: 8px; /* Border radius */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for card */
     margin-top: 7%;
-    height: 200px; /* Set the height to your desired value */
+    height: 30%; /* Set the height to your desired value */
 }
 
 .professor-link {

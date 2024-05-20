@@ -1,20 +1,12 @@
 
 
 
-.banner {
-    background: linear-gradient(135deg, #004d80, #00cccc); /* Soft green gradient */
-    color: #0a0b0c; /* Dark grey text color for contrast */
-    text-align: center;
-    padding: 40px 0; /* Increased padding */
-    border-radius: 00px; /* Rounded corners */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Increased shadow */
-}
 
 
 
 .banner h1 {
     margin: 0;
-    font-size: 60px; /* Larger font size */
+    font-size: 48px; /* Larger font size */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Setting a font family */
     letter-spacing: 5px; /* Increased letter spacing */
     text-transform: uppercase; /* Uppercase text */
@@ -37,7 +29,7 @@
 }
 
 .nav-link:hover {
-    color: #f9f9f9; /* Change text color on hover */
+    color: #160f0f; /* Change text color on hover */
 }
 
 .navbar .active {
@@ -48,7 +40,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-    color: #f9f9f9; /* Change text color on hover or when active */
+    color: #0f0b0b; /* Change text color on hover or when active */
     /* Add any other styles you want for hovered or active links */
 }
 
@@ -64,7 +56,7 @@
 
 
 .outerdiv {
-    padding: 10%; /* Add padding around the content */
+    padding: 8%; /* Add padding around the content */
 }
 
 
@@ -97,6 +89,104 @@
 }
 
 
+.carousel-item img {
+    height: 500px; /* Set the desired height for the carousel images */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire carousel item */
+}
+
+.row{
+    margin-bottom: 2%;
+}
+
+.event-box {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Max width for larger screens */
+    height: 90%; /* Fixed height */
+    overflow: hidden; /* Hide overflow content */
+    border: 1px solid #ddd; /* Add border for the box */
+    border-radius: 5px; /* Rounded corners */
+    margin: 20px auto; /* Center the box and add top-bottom margin */
+    background-color: #f9f9f9; /* Background color for better visibility */
+    padding: 10px;
+}
+
+.event-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    animation: slide-up 20s linear infinite;
+}
+
+.event-list li {
+    white-space: nowrap; /* Prevent wrapping */
+    padding: 5px 10px; /* Add padding to list items */
+}
+
+.event-list li a {
+    text-decoration: none;
+    color: #333; /* Set link color */
+    transition: color 0.3s ease; /* Add transition for smoother color change */
+}
+
+.event-list li a:hover {
+    color: #0066cc; /* Change link color on hover */
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.event-box-head h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: red;
+    animation: blink 1s infinite alternate; /* Blinking animation */
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .event-box {
+        height: 150px; /* Adjust height for smaller screens */
+        padding: 5px;
+    }
+
+    .event-list li {
+        padding: 3px 5px; /* Reduce padding for list items */
+    }
+
+    .event-box h3 {
+        font-size: 16px; /* Smaller font size for heading */
+    }
+}
+
+@media (max-width: 480px) {
+    .event-box {
+        height: 120px; /* Further adjust height for smaller screens */
+    }
+
+    .event-list li {
+        padding: 2px 3px; /* Further reduce padding for list items */
+    }
+
+    .event-box h3 {
+        font-size: 14px; /* Smaller font size for heading */
+    }
+}
 
 
 
@@ -211,6 +301,11 @@
     margin-bottom: 20px; /* Adjust margin bottom as needed */
 }
 
+.member-card {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the entire link area clickable */
+}
 .member-image {
     flex: 0 0 100px;
     width: 100px;
@@ -240,28 +335,36 @@
 }
 
 
-
 /* Footer styles */
 .footer {
     background-color: #004d80; /* Match the deep blue from the banner */
     color: #fff;
-    padding: 40px 0;
+    padding: 40px 20px; /* Adjust padding for smaller screens */
 }
 
 .footer-inner {
     display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    justify-content: center;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
+.footer .copyright {
+    text-align: center; /* Center the copyright message */
+    margin-top: 20px; /* Add some space between the contact info and copyright */
+    font-size: 14px; /* Adjust font size */
+    color: #888; /* Adjust color */
+}
 .footer-column {
     flex: 1;
-    margin-right: 40px;
+    margin-right: 20px; /* Adjust margin for smaller screens */
+    margin-bottom: 20px; /* Add margin between columns */
 }
 
+
 .footer-column:last-child {
-    margin-left: 2%;
+    margin-right: 0;
 }
 
 .footer-column h3 {
@@ -285,6 +388,7 @@
 
 .social-icons {
     padding: 0;
+    text-align: center; /* Center align social icons */
 }
 
 .social-icons li {
